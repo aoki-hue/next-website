@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "text": "お知らせ",
+      "className": "informationLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information01" },
+    "date": "2025-01-01",
+    "title": "お知らせタイトル01",
+    "url": "/page/information/information01.html"
+  },
+  {
+    "id": 2,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information02" },
+    "date": "2025-02-12",
+    "title": "お知らせタイトル02",
+    "url": "/page/information/information02.html"
+  },
+  {
+    "id": 3,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information03" },
+    "date": "2025-03-30",
+    "title": "お知らせタイトル03",
+    "url": "/page/information/information03.html"
+  },
+  {
+    "id": 4,
+    "category": {
+      "text": "お知らせ",
+      "className": "informationLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information04" },
+    "date": "2025-04-04",
+    "title": "お知らせタイトル04",
+    "url": "/page/information/information04.html"
+  },
+  {
+    "id": 5,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information05" },
+    "date": "2025-05-15",
+    "title": "お知らせタイトル05",
+    "url": "/page/information/information05.html"
+  },
+  {
+    "id": 6,
+    "category": {
+      "text": "お知らせ",
+      "className": "informationLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information06" },
+    "date": "2025-06-26",
+    "title": "お知らせタイトル06",
+    "url": "/page/information/information06.html"
+  },
+  {
+    "id": 7,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information07" },
+    "date": "2025-07-27",
+    "title": "お知らせタイトル07",
+    "url": "/page/information/information07.html"
+  },
+  {
+    "id": 8,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information08" },
+    "date": "2025-08-08",
+    "title": "お知らせタイトル08",
+    "url": "/page/information/information08.html"
+  },
+  {
+    "id": 9,
+    "category": {
+      "text": "お知らせ",
+      "className": "informationLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information09" },
+    "date": "2025-09-19",
+    "title": "お知らせタイトル09",
+    "url": "/page/information/information09.html"
+  },
+  {
+    "id": 10,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information10" },
+    "date": "2025-10-20",
+    "title": "お知らせタイトル10",
+    "url": "/page/information/information10.html"
+  },
+  {
+    "id": 11,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information11" },
+    "date": "2025-11-31",
+    "title": "お知らせタイトル11",
+    "url": "/page/information/information11.html"
+  },
+  {
+    "id": 12,
+    "category": {
+      "text": "お知らせ",
+      "className": "informationLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information12" },
+    "date": "2025-12-12",
+    "title": "お知らせタイトル12",
+    "url": "/page/information/information12.html"
+  },
+  {
+    "id": 13,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information13" },
+    "date": "2025-01-21",
+    "title": "お知らせタイトル13",
+    "url": "/page/information/information13.html"
+  },
+  {
+    "id": 14,
+    "category": {
+      "text": "お知らせ",
+      "className": "informationLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information14" },
+    "date": "2025-02-22",
+    "title": "お知らせタイトル14",
+    "url": "/page/information/information14.html"
+  },
+  {
+    "id": 15,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information15" },
+    "date": "2025-03-03",
+    "title": "お知らせタイトル15",
+    "url": "/page/information/information15.html"
+  },
+  {
+    "id": 16,
+    "category": {
+      "text": "ブログ",
+      "className": "blogLabel"
+    },
+    "img": { "src": "thumbnail01", "alt": "information16" },
+    "date": "2025-04-16",
+    "title": "お知らせタイトル16",
+    "url": "/page/information/information16.html"
+  }
+]

@@ -1,0 +1,169 @@
+/* 縦-横 中央寄せ */
+.centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* 見出し - h2 */
+.headLabel {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 20px;
+  color: var(--gray-violet);
+}
+
+.headLabelIcon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  font-size: 2.4rem;
+}
+
+.headLabelText {
+  font-size: 3.2rem;
+}
+
+/* primary btn */
+.primaryBtn {
+  position: relative;
+  width: 208px;
+  background-color: var(--red-low-saturation);
+  border: 2px solid var(--red-low-saturation);
+  text-align: center;
+  color: var(--white);
+  margin: 0 auto;
+  padding: 16px 0;
+  border-radius: 3px;
+}
+
+.primaryBtn .primaryBtnIcon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.primaryBtn:hover {
+  background-color: var(--yellow-thick);
+  border: 2px solid var(--yellow-thick);
+  color: var(--white);
+}
+
+.bgPrimaryBtn:hover {
+  background-color: var(--white);
+  border: 2px solid var(--red-low-saturation);
+  color: var(--red-low-saturation);
+}
+
+/* secondary btn */
+.secondaryBtn {
+  composes: primaryBtn;
+  background-color: var(--white);
+  border: 2px solid var(--red-low-saturation);
+  color: var(--red-low-saturation);
+}
+
+.secondaryBtn:hover {
+  background-color: var(--red-low-saturation);
+  color: var(--white);
+}
+
+/* checkbox */
+.checkLabel {
+  display: block;
+  padding: 8px 0;
+  width: 100px;
+  border: 1px solid var(--gray-25);
+  color: var(--gray-25);
+  border-radius: 6px;
+  text-align: center;
+}
+
+input:checked + .checkLabel {
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--white);
+}
+
+/* container */
+.container {
+  width: 1136px;
+  margin: 0 auto;
+  padding-top: 72px;
+}
+
+.bgContainer {
+  composes: container;
+  width: 100%;
+  background-color: var(--yellow-thick);
+  padding: 72px 0;
+}
+
+.bgContainer .containerInner {
+  width: 1136px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container + .container.bgContainer {
+  margin-top: 72px;
+}
+
+.bgContainer .headLabel {
+  color: var(--white);
+}
+
+/*====================================================*/
+/* 768px - 1136px */
+/*====================================================*/
+@media screen and (min-width: 768px) and (max-width: 1136px) {
+  .container {
+    width: 100%;
+    padding: 72px 48px;
+    margin: 0;
+  }
+
+  .bgContainer .containerInner {
+    width: 100%;
+    /* padding: 0; */
+    margin: 0;
+  }
+}
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 56px 24px;
+    margin: 0;
+  }
+
+  .bgContainer .containerInner {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .headLabelText {
+    font-size: 2.8rem;
+  }
+
+  .headLabelIcon {
+    font-size: 2rem;
+  }
+
+  .checkLabel {
+    padding: 4px 0;
+    width: 72px;
+    font-size: 1.4rem;
+  }
+}

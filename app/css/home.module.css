@@ -1,0 +1,131 @@
+.mainVisual {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.mainVisual_text {
+  composes: centering from "@/css/utils.module.css";
+  left: 0;
+  transform: translateY(-50%);
+  font-family: serif;
+  font-size: 48px;
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  opacity: 0;
+  -webkit-animation: 3s fadeup ease-in-out forwards;
+  animation: 3s fadeup ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mainVisual_image {
+  width: 100%;
+}
+
+/* concept */
+.concept {
+  position: relative;
+  margin: 48px auto 0;
+  max-width: 1136px;
+  width: auto;
+}
+
+.conceptImg {
+  width: 704px;
+}
+
+.conceptTextArea {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 576px;
+  padding: 32px;
+  background-color: var(--white);
+}
+
+.conceptText {
+  line-height: 1.75;
+}
+
+/*====================================================*/
+/* 768px - 1136px */
+/*====================================================*/
+@media screen and (min-width: 768px) and (max-width: 1136px) {
+  /* concept */
+  .concept {
+    max-width: 100vw;
+    text-align: center;
+  }
+
+  .conceptTextArea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: calc(704px - 36px);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+/*====================================================*/
+/* sp */
+/*====================================================*/
+
+@media screen and (max-width: 767px) {
+  .mainVisual_text {
+    font-size: 2.8rem;
+  }
+
+  .concept {
+    margin-top: 32px;
+  }
+
+  .conceptTextArea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    padding: 16px 24px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .conceptImg {
+    width: 100%;
+  }
+
+  .conceptText {
+    line-height: 1.75;
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "menuCategory": "Cut",
+    "menuList": [
+      { "id": 1, "menu": "カット&シャンプー", "price": "￥4950" },
+      { "id": 2, "menu": "ポイントカット", "price": "￥1925" },
+      { "id": 3, "menu": "眉カット", "price": "￥770" }
+    ]
+  },
+  {
+    "id": 2,
+    "menuCategory": "Hair Color",
+    "menuList": [
+      { "id": 1, "menu": "単色カラー", "price": "￥6380" },
+      { "id": 2, "menu": "ブリーチ(1回目)", "price": "￥5500" },
+      { "id": 3, "menu": "ブリーチ(2回目)", "price": "￥3300" },
+      { "id": 4, "menu": "眉カラー", "price": "￥1100" }
+    ]
+  },
+  {
+    "id": 3,
+    "menuCategory": "Perm",
+    "menuList": [
+      { "id": 1, "menu": "通常パーマ", "price": "￥6380" },
+      { "id": 2, "menu": "特殊パーマ", "price": "￥9900～" },
+      { "id": 3, "menu": "ポイントパーマ", "price": "￥3300" }
+    ]
+  },
+  {
+    "id": 4,
+    "menuCategory": "Straight Perm",
+    "menuList": [
+      { "id": 1, "menu": "ポイント縮毛矯正", "price": "￥4400～" },
+      { "id": 2, "menu": "縮毛矯正", "price": "￥11000" }
+    ]
+  },
+  {
+    "id": 5,
+    "menuCategory": "Treatment",
+    "menuList": [
+      { "id": 1, "menu": "トリートメント", "price": "￥1100" },
+      { "id": 2, "menu": "ヘッドスパ(20分)", "price": "￥2200" },
+      { "id": 3, "menu": "ヘッドスパ(30分)", "price": "￥3300" }
+    ]
+  }
+]

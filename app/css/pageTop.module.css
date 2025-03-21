@@ -1,0 +1,39 @@
+.pageTop {
+  position: fixed;
+  right: 36px;
+  bottom: 36px;
+  width: 48px;
+  height: 48px;
+  font-size: 3.2rem;
+  border-radius: 50%;
+  background-color: var(--red-low-saturation);
+  color: var(--white);
+  z-index: 1;
+}
+
+.pageTopIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.pageTop:hover {
+  background-color: var(--yellow-thick);
+}
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+@media screen and (max-width: 767px) {
+  .pageTop {
+    bottom: 28px;
+    right: 28px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .pageTopIcon {
+    font-size: 2.8rem;
+  }
+}

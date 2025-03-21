@@ -1,0 +1,183 @@
+.header {
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 72px;
+  background-color: var(--white);
+  z-index: 1;
+  border-bottom: 1px solid var(--gray-violet);
+}
+
+.logo {
+  width: 112px;
+  height: auto;
+}
+
+.nav ul {
+  display: flex;
+  gap: 0 48px;
+}
+
+.nav ul li {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.nav ul li:hover {
+  color: var(--red-low-saturation);
+}
+
+.tel {
+  position: relative;
+  padding-left: 56px;
+}
+
+.tel .telIcon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-size: 2.8rem;
+  color: var(--white);
+  transform: translateY(-50%) scale(-1, 1);
+  padding: 8px;
+  background-color: var(--red-low-saturation);
+  border-radius: 6px;
+}
+
+.telText {
+  font-size: var(--text-small);
+}
+
+.telNumber {
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .accordionButton {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav ul {
+    margin: 0 auto;
+  }
+}
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+@media screen and (max-width: 767px) {
+  .header {
+    position: initial;
+    background: rgba(255, 255, 255, 1);
+    padding: 16px 24px;
+  }
+
+  .tel {
+    margin-top: 48px;
+  }
+
+  .accordionButton {
+    position: absolute;
+    right: 24px;
+    display: grid;
+    place-items: center;
+    z-index: 200;
+    width: 32px;
+    height: 32px;
+  }
+
+  .accordionButton::before,
+  .accordionButton::after,
+  .accordionButton .accordionBar {
+    grid-area: 1 / 1;
+    content: "";
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.4s;
+  }
+
+  .close.accordionButton::before {
+    transform: translateY(-8px);
+  }
+
+  .close.accordionButton::after {
+    transform: translateY(8px);
+  }
+
+  .open.accordionButton::before {
+    transform: rotate(45deg);
+  }
+
+  .open.accordionButton::after {
+    transform: rotate(-45deg);
+  }
+
+  .open.accordionButton .accordionBar {
+    transform: scale(0);
+  }
+
+  .nav {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    width: 75%;
+    padding: 72px 24px 24px;
+    background-color: var(--white);
+    transition: transform 0.4s;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .nav ul li {
+    position: relative;
+    width: 50%;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-violet);
+  }
+
+  .nav ul li::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    content: "";
+    width: 1px;
+    height: 28px;
+    border-right: 1px dashed var(--gray-violet);
+  }
+
+  .nav ul li:nth-child(-n + 2) {
+    border-top: 1px solid var(--gray-violet);
+  }
+
+  .nav.open {
+    transform: translateX(-100%);
+    z-index: 2;
+  }
+
+  .navBg.open {
+    background: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

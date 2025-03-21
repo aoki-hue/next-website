@@ -1,0 +1,50 @@
+.footer {
+  margin-top: 144px;
+  background-color: var(--gray-thick);
+  padding: 48px 0;
+}
+
+.footer .snsArea {
+  display: flex;
+  gap: 0 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.snsArea .sns {
+  position: relative;
+  color: var(--white);
+  width: 48px;
+  height: 48px;
+  padding: 16px;
+  background-color: var(--red-low-saturation);
+  border-radius: 50%;
+}
+
+.snsIcon {
+  composes: centering from "css/utils.module.css";
+  font-size: 1.6rem;
+}
+
+.snsLink:hover .sns {
+  background-color: var(--yellow-thick);
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--white);
+  text-align: center;
+  margin-top: 48px;
+}
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+
+@media screen and (max-width: 767px) {
+  .footer {
+    margin-top: 72px;
+  }
+}

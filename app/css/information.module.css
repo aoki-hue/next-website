@@ -1,0 +1,110 @@
+.infoArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 48px 0;
+}
+
+.infoList {
+  position: relative;
+  width: calc((100% - 32px * 3) / 4);
+  border: 1px solid var(--gray-violet);
+  border-radius: 6px;
+}
+
+.infoCategory {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  width: 72px;
+  padding: 8px 0;
+  background-color: var(--yellow-thick);
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.infoWrap {
+  padding: 16px 8px 72px 8px;
+}
+
+.infoThumbnail {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+}
+
+.infoDate {
+  font-size: 1.4rem;
+  color: var(--gray-violet);
+  text-align: right;
+}
+
+.infoDateIcon {
+  margin-right: 8px;
+}
+
+.infoTitle {
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+.infoRead {
+  position: absolute;
+  color: var(--red-low-saturation);
+  right: 8px;
+  bottom: 24px;
+}
+
+.infoReadIcon {
+  margin-left: 16px;
+}
+
+.infoLink:hover .infoRead {
+  color: var(--yellow-thick);
+}
+
+.infoLink:hover .infoThumbnail {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.checkListWrap {
+  display: flex;
+}
+
+.checkList + .checkList {
+  margin-left: 24px;
+}
+
+/*====================================================*/
+/* 768px - 1024px */
+/*====================================================*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .infoList {
+    width: calc((100% - 32px * 2) / 3);
+  }
+}
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+
+@media screen and (max-width: 767px) {
+  .infoArea {
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .infoList {
+    width: calc((100% - 16px) / 2);
+  }
+
+  .checkList + .checkList {
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,64 @@
+.accessArea {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  align-items: flex-start;
+}
+
+.storeInfo {
+  width: calc((100% - 48px) / 2);
+}
+
+.storeRow {
+  display: flex;
+  gap: 0 12px;
+  border-bottom: 1px solid var(--gray-violet);
+}
+
+.storeItemLabel {
+  font-weight: bold;
+  width: 100px;
+  padding: 16px 0 16px 12px;
+}
+
+.storeItem {
+  padding: 16px 12px 16px 0;
+}
+
+/* slider */
+.swiperWrap {
+  width: calc((100% - 48px) / 2);
+}
+
+/*====================================================*/
+/* 768px - 1136px */
+/*====================================================*/
+@media screen and (min-width: 768px) and (max-width: 1136px) {
+}
+
+/*====================================================*/
+/* スマホ表示 */
+/*====================================================*/
+
+@media screen and (max-width: 767px) {
+  .accessArea {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 16px 0;
+  }
+
+  .storeItemLabel {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .storeInfo,
+  .storeImg {
+    width: 100%;
+  }
+
+  /* slider */
+  .swiperWrap {
+    width: 100%;
+  }
+}
