@@ -1,7 +1,8 @@
 /* components */
 import { HeadLabel, SectionArea, PrimaryBtn, LinkPageTop } from "@/components/utils/modules";
 import Menu from "@/components/Menu";
-import Information from "@/components/Information";
+// import Information from "@/components/Information";
+import Access from "@/components/Access";
 
 /* css */
 import styles from "@/css/home.module.css";
@@ -9,11 +10,15 @@ import styles from "@/css/home.module.css";
 /* link */
 import Link from "next/link";
 
+/* metaデータ */
+import Meta from "@/components/Meta";
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <Meta pageTitle="" pageDesc="" />
       <div className={styles.mainVisual}>
         <p className={styles.mainVisual_text}>魅力引き出すサロン</p>
         <Image src="/img/mainVisual.jpg" width={1244} height={670} alt="メインビジュアル" className={styles.mainVisual_image} />
@@ -40,13 +45,16 @@ export default function Home() {
           <PrimaryBtn text="View more" isBg />
         </Link>
       </SectionArea>
-      <SectionArea isBackground={false}>
+      {/* <SectionArea isBackground={false}>
         <HeadLabel title="information" />
         <Information isInformationPage={false} checkedValue={[]} />
         <Link href="/information">
           <PrimaryBtn text="View more" isBg={false} />
         </Link>
+      </SectionArea> */}
+      <SectionArea isBackground={false}>
+        <Access />
       </SectionArea>
-    </main>
+    </>
   );
 }

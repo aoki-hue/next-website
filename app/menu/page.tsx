@@ -1,0 +1,20 @@
+import React from "react";
+
+/* components */
+import { SectionArea, HeadLabel } from "@/components/utils/modules";
+import Menu from "@/components/Menu";
+// import Meta from "@/components/Meta";
+
+const MenuPage = () => {
+  return (
+    <React.Fragment>
+      {/* <Meta pageTitle="メニュー" pageDesc="本店のメニュー一覧と金額です" /> */}
+      <SectionArea isBackground>
+        <HeadLabel title="menu" />
+        <Menu isMenuPage />
+      </SectionArea>
+    </React.Fragment>
+  );
+};
+
+export default MenuPage;

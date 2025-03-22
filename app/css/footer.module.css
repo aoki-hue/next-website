@@ -24,7 +24,7 @@
 }
 
 .snsIcon {
-  composes: centering from "css/utils.module.css";
+  composes: centering from "@/css/utils.module.css";
   font-size: 1.6rem;
 }
 

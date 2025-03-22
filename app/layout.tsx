@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 
 /* components */
 import Header from "@/components/Header";
-// import Footer from "components/footer";
-// import PageTop from "components/pageTop";
+import Footer from "@/components/Footer";
+import PageTop from "@/components/PageTop";
 
 /* css */
 import "@/css/global.css";
@@ -24,8 +24,8 @@ const RootLayout = ({
       <body>
         <Header />
         <main>{children}</main>
-        {/* <PageTop /> */}
-        {/* <Footer /> */}
+        <PageTop />
+        <Footer />
       </body>
     </html>
   );
