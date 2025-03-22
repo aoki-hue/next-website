@@ -68,7 +68,7 @@ const Access = () => {
           {images.map((src: string, index: number) => {
             return (
               <SwiperSlide key={`${index}`}>
-                <Image src={src} layout="responsive" width={545} height={439} alt="店舗イメージ" />
+                <Image src={src} layout="responsive" width={545} height={439} alt="店舗イメージ" style={{ objectFit: "contain" }} />
               </SwiperSlide>
             );
           })}

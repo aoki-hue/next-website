@@ -5,6 +5,13 @@ import { SectionArea, HeadLabel } from "@/components/utils/modules";
 import Menu from "@/components/Menu";
 // import Meta from "@/components/Meta";
 
+/* metaデータ */
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Menu",
+};
+
 const MenuPage = () => {
   return (
     <React.Fragment>
