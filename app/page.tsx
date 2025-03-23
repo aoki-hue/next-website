@@ -1,5 +1,5 @@
 /* components */
-import { HeadLabel, SectionArea, PrimaryBtn, LinkPageTop } from "@/components/utils/modules";
+import { HeadLabel, SectionArea, PrimaryBtn } from "@/components/utils/modules";
 import Menu from "@/components/Menu";
 import Information from "@/components/Information";
 import Access from "@/components/Access";

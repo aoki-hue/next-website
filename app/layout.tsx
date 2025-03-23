@@ -10,9 +10,7 @@ import PageTop from "@/components/PageTop";
 import "@/css/global.css";
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | 美容室チャイム",
-  },
+  title: "美容室チャイム",
   description: "美容室チャイムは、最新の技術と心温まるサービスであなたの魅力を最大限に引き出します。",
   openGraph: {
     title: "美容室チャイム",

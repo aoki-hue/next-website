@@ -1,8 +1,7 @@
 import React from "react";
 
 /* components */
-import { SecondaryBtn, LinkPageTop } from "@/components/utils/modules";
-import Meta from "@/components/Meta";
+import { SecondaryBtn } from "@/components/utils/modules";
 
 /* link */
 import Link from "next/link";
@@ -13,7 +12,6 @@ import styles from "@/css/error.module.css";
 const Error = () => {
   return (
     <React.Fragment>
-      {/* <Meta pageTitle="404" pageDesc="お探しのページが見つかりませんでした" /> */}
       <div className={styles.errorNum}>404</div>
       <p className={styles.errorTextLabel}>お探しのページが見つかりませんでした</p>
       <p className={styles.errorText}>下記ボタンから再度アクセスしてください</p>

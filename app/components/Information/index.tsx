@@ -1,6 +1,7 @@
+/* eslint @typescript-eslint/no-explicit-any: 0 */
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 /* link */
 import Link from "next/link";
@@ -18,8 +19,6 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 /* image */
 import Image from "next/image";
-// import thumbnail01 from "img/thumbnailInfo1.jpg";
-// import thumbnail02 from "img/thumbnailInfo2.jpg";
 
 type InformationProps = {
   isInformationPage: boolean;
@@ -28,7 +27,7 @@ type InformationProps = {
 
 const Information = (props: InformationProps) => {
   const { isInformationPage, checkedValue } = props;
-  let { informationData, filteredData, addArray }: any = [];
+  let { informationData, filteredData }: any = [];
   let checkedValueJoin: string = "";
 
   if (isInformationPage === false) {
