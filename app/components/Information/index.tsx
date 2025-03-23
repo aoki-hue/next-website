@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 
 /* link */
 import Link from "next/link";
@@ -24,45 +26,35 @@ type InformationProps = {
   checkedValue: string[];
 };
 
-const Information = ({ isInformationPage = false, checkedValue }: InformationProps) => {
-  let informationData = [];
-  let filteredData = [];
-
-  let addArray: string[] = [];
+const Information = (props: InformationProps) => {
+  const { isInformationPage, checkedValue } = props;
+  let { informationData, filteredData, addArray }: any = [];
+  let checkedValueJoin: string = "";
 
   if (isInformationPage === false) {
-    // dataの順序を降順に
-    data.sort((a, b) => {
-      return b.id - a.id;
-    });
-
-    filteredData = data.slice(0, 8);
-    informationData = filteredData;
+    // トップページの場合
+    informationData = data.slice(0, 8);
   } else {
+    // インフォ一覧画面の場合
     if (checkedValue.length === 0) {
-      data.sort((a, b) => {
-        return b.id - a.id;
-      });
-
+      // インフォカテゴリのチェック数が0の場合
       informationData = data;
     } else {
-      checkedValue.forEach((value) => {
-        filteredData = data.filter((data) => {
-          return data.category.text === value;
-        });
-        filteredData.forEach((val) => {
-          addArray.push(val);
-        });
-      });
+      checkedValueJoin = checkedValue.join(",");
 
-      // addArrayの順序を降順に
-      informationData = addArray.sort((a, b) => {
-        return b.id - a.id;
+      filteredData = data.filter((item) => {
+        return checkedValueJoin.includes(item.category.text);
       });
+      console.log(filteredData);
 
-      informationData = addArray;
+      informationData = filteredData;
     }
   }
+
+  // informationDataの順序を降順に
+  informationData.sort((a: any, b: any) => {
+    return b.id - a.id;
+  });
 
   return (
     <React.Fragment>
@@ -78,11 +70,11 @@ const Information = ({ isInformationPage = false, checkedValue }: InformationPro
         `}
       </style>
       <ul className={styles.infoArea}>
-        {informationData.map((information) => (
+        {informationData.map((information: any) => (
           <li className={styles.infoList} key={information.id}>
             <Link href={information.url} className={styles.infoLink}>
               <span className={`${styles.infoCategory} ${information.category.className}`}>{information.category.text}</span>
-              <img src={thumbnail01} alt={information.img.alt} className={styles.infoThumbnail}></img>
+              <Image src={information.img.src} alt={information.img.alt} width={259} height={154} className={styles.infoThumbnail} />
               <div className={styles.infoWrap}>
                 <p className={styles.infoDate}>
                   <FontAwesomeIcon icon={faClock} className={styles.infoDateIcon} />

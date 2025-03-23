@@ -1,7 +1,7 @@
 /* components */
 import { HeadLabel, SectionArea, PrimaryBtn, LinkPageTop } from "@/components/utils/modules";
 import Menu from "@/components/Menu";
-// import Information from "@/components/Information";
+import Information from "@/components/Information";
 import Access from "@/components/Access";
 
 /* css */
@@ -49,13 +49,13 @@ export default function Home() {
           <PrimaryBtn text="View more" isBg />
         </Link>
       </SectionArea>
-      {/* <SectionArea isBackground={false}>
+      <SectionArea isBackground={false}>
         <HeadLabel title="information" />
         <Information isInformationPage={false} checkedValue={[]} />
         <Link href="/information">
           <PrimaryBtn text="View more" isBg={false} />
         </Link>
-      </SectionArea> */}
+      </SectionArea>
       <SectionArea isBackground={false}>
         <Access />
       </SectionArea>
