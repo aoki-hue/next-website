@@ -27,7 +27,8 @@ type InformationProps = {
 
 const Information = (props: InformationProps) => {
   const { isInformationPage, checkedValue } = props;
-  let { informationData, filteredData }: any = [];
+  let informationData = [];
+  let filteredData = [];
   let checkedValueJoin: string = "";
 
   if (isInformationPage === false) {
