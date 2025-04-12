@@ -12,35 +12,8 @@ import styles from "@/css/access.module.css";
 
 /* img */
 import Image from "next/image";
-const images = ["/img/storeImage1.jpg", "/img/storeImage2.jpg", "/img/storeImage3.jpg"];
-
-let currentIndex: number = 0;
 
 const Access = () => {
-  const slidesRef = useRef<HTMLDListElement>(null!);
-  const [ulStyle, setUlStyle] = useState({ left: 0 });
-
-  const buttonPrevClick = (): void => {
-    currentIndex--;
-    currentIndex = currentIndex % images.length;
-    moveSlide();
-  };
-
-  const buttonNextClick = (): void => {
-    currentIndex++;
-    currentIndex = currentIndex % images.length;
-    moveSlide();
-  };
-
-  const moveSlide = (): void => {
-    if (currentIndex < 0) {
-      currentIndex = images.length - 1;
-    }
-
-    const slideWidth = slidesRef.current.clientWidth;
-    setUlStyle({ left: -1 * slideWidth * currentIndex });
-  };
-
   return (
     <React.Fragment>
       <HeadLabel title="Access" />
@@ -72,25 +45,7 @@ const Access = () => {
           </tbody>
         </table>
         <div className={styles.carousel}>
-          <div className={styles.container}>
-            <ul className={styles.sliderUl} style={ulStyle}>
-              {images.map((src: string, index: number) => {
-                return (
-                  <li key={index} ref={slidesRef} className={styles.sliderList}>
-                    <Image src={src} width={545} height={439} alt="店舗イメージ" className={styles.sliderImage} />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div className={styles.buttonBox}>
-            <button id="prev" className={styles.buttonPrev} onClick={buttonPrevClick}>
-              &lt;
-            </button>
-            <button id="next" className={styles.buttonNext} onClick={buttonNextClick}>
-              &gt;
-            </button>
-          </div>
+          <Image src="/img/storeImage1.jpg" width={545} height={439} alt="店舗イメージ" className={styles.sliderImage} style={{ objectFit: "contain" }} />
         </div>
       </div>
     </React.Fragment>
