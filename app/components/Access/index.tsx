@@ -1,26 +1,46 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 
 /* components */
 import { HeadLabel } from "@/components/utils/modules";
 
 /* swiper */
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 /* css */
 import styles from "@/css/access.module.css";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 /* img */
 import Image from "next/image";
-
 const images = ["/img/storeImage1.jpg", "/img/storeImage2.jpg", "/img/storeImage3.jpg"];
 
+let currentIndex: number = 0;
+
 const Access = () => {
+  const slidesRef = useRef<HTMLDListElement>(null!);
+  const [ulStyle, setUlStyle] = useState({ left: 0 });
+
+  const buttonPrevClick = (): void => {
+    currentIndex--;
+    currentIndex = currentIndex % images.length;
+    moveSlide();
+  };
+
+  const buttonNextClick = (): void => {
+    currentIndex++;
+    currentIndex = currentIndex % images.length;
+    moveSlide();
+  };
+
+  const moveSlide = (): void => {
+    if (currentIndex < 0) {
+      currentIndex = images.length - 1;
+    }
+
+    const slideWidth = slidesRef.current.clientWidth;
+    setUlStyle({ left: -1 * slideWidth * currentIndex });
+  };
+
   return (
     <React.Fragment>
       <HeadLabel title="Access" />
@@ -51,28 +71,27 @@ const Access = () => {
             </tr>
           </tbody>
         </table>
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          slidesPerView={1} //一度に表示するスライドの数
-          pagination={{
-            clickable: true,
-          }} //何枚目のスライドかを示すアイコン、スライドの下の方にある
-          navigation //スライドを前後させるためのボタン、スライドの左右にある
-          loop={true}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          className={styles.swiperWrap}
-        >
-          {images.map((src: string, index: number) => {
-            return (
-              <SwiperSlide key={`${index}`}>
-                <Image src={src} layout="responsive" width={545} height={439} alt="店舗イメージ" style={{ objectFit: "contain" }} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        <div className={styles.carousel}>
+          <div className={styles.container}>
+            <ul className={styles.sliderUl} style={ulStyle}>
+              {images.map((src: string, index: number) => {
+                return (
+                  <li key={index} ref={slidesRef} className={styles.sliderList}>
+                    <Image src={src} width={545} height={439} alt="店舗イメージ" className={styles.sliderImage} />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className={styles.buttonBox}>
+            <button id="prev" className={styles.buttonPrev} onClick={buttonPrevClick}>
+              &lt;
+            </button>
+            <button id="next" className={styles.buttonNext} onClick={buttonNextClick}>
+              &gt;
+            </button>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );
