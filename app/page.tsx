@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.mainVisual}>
-        <p className={styles.mainVisual_text}>魅力引き出すサロン</p>
+        {/* <p className={styles.mainVisual_text}>魅力引き出すサロン</p> */}
         <Image src="/img/mainVisual.jpg" width={1244} height={670} alt="メインビジュアル" className={styles.mainVisual_image} style={{ objectFit: "contain" }} />
       </div>
       <SectionArea isBackground={false}>
